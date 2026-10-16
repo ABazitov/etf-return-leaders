@@ -1,0 +1,32 @@
+House Clerk PTR PDFs, downloaded 2026-10-08 from https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/<DocID>.pdf
+2026FD.xml from https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026FD.zip
+20029134.pdf, 20030541.pdf, 20033564.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2025/<DocID>.pdf (downloaded 2026-10-09; amount range split across a page break)
+20026590.pdf, 20030207.pdf, 20030875.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2025/<DocID>.pdf (downloaded 2026-10-09; comment text before the next owner-prefixed record; 20030875 has a leading filer ID column)
+old/<year>-<DocID>.pdf: pre-2022 layout House PTRs, read with pypdf layout mode; source https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/<year>/<DocID>.pdf (downloaded 2026-10-09):
+  old/2014-20000037.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2014/20000037.pdf
+  old/2014-20000320.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2014/20000320.pdf
+  old/2014-20000868.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2014/20000868.pdf
+  old/2014-20001019.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2014/20001019.pdf
+  old/2014-20001276.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2014/20001276.pdf
+  old/2014-20002231.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2014/20002231.pdf
+  old/2015-20002353.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2015/20002353.pdf
+  old/2015-20002402.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2015/20002402.pdf
+  old/2016-20005456.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2016/20005456.pdf
+  old/2016-20005556.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2016/20005556.pdf
+  old/2017-20007467.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2017/20007467.pdf
+  old/2018-20008973.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2018/20008973.pdf
+  old/2019-20011457.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2019/20011457.pdf
+  old/2019-20011692.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2019/20011692.pdf
+  old/2020-20015024.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20015024.pdf
+  old/2020-20016958.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20016958.pdf
+  old/2020-20017475.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2020/20017475.pdf
+  old/2021-20018021.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2021/20018021.pdf
+20021325.pdf, 20021740.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/<DocID>.pdf (downloaded 2026-10-09; 20021325 has a Deleted row, 20021740 has a comment wrapped up to the table end)
+  old/2014-20001226.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2014/20001226.pdf (original of the rows 20001268 deletes)
+  old/2014-20001268.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2014/20001268.pdf (two Deleted rows)
+  old/2017-20007014.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2017/20007014.pdf (PUT/SPY and PUT/XSP option rows)
+  old/2018-20008680.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2018/20008680.pdf (PUT/SPY and PUT/XSP option rows)
+  old/2015-20003115.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2015/20003115.pdf ("(RTNb) (stock)")
+  old/2018-20010294.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2018/20010294.pdf ("DC go boND", not an owner)
+20021754.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2022/20021754.pdf (downloaded 2026-10-09; "Subholding Of" text wrapped onto the next line, once across a page break)
+20027982.pdf: https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2025/20027982.pdf (downloaded 2026-10-09; description and comment text wrapped; the comment runs into the next record, which has no owner)

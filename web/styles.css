@@ -1,0 +1,69 @@
+:root {
+  --bg: #0b0f14; --panel: #111821; --line: #243040; --line2: #151d27; --fg: #c9d4e0; --mut: #7d8b99;
+  --amber: #f5a623; --up: #3ddc84; --dn: #ff5c5c; --link: #5fb3ff;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); }
+body { font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-variant-numeric: tabular-nums;
+  padding: env(safe-area-inset-top, 0) 16px env(safe-area-inset-bottom, 0); }
+button, input, select { font: inherit; color: inherit; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 1px; }
+.mut { color: var(--mut); } .warn { color: var(--amber); } .up { color: var(--up); } .dn { color: var(--dn); }
+.bar { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line);
+  position: sticky; top: env(safe-area-inset-top, 0); background: var(--bg); z-index: 2; font-size: 12px; }
+.brand { color: var(--amber); font-weight: 700; letter-spacing: .06em; }
+#market.open { color: var(--up); }
+.link { background: none; border: 0; padding: 0; cursor: pointer; }
+.ctl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line2); }
+.ctl > div { display: flex; gap: 4px; }
+.k { background: transparent; border: 1px solid var(--line); color: var(--mut); padding: 3px 9px; cursor: pointer; }
+.k.on { background: var(--amber); border-color: var(--amber); color: var(--bg); }
+label.k { display: inline-flex; gap: 6px; align-items: center; }
+.srch { flex: 1 1 140px; min-width: 0; background: transparent; border: 1px solid var(--line); padding: 3px 8px; }
+.cap { margin: 10px 0 6px; font-size: 12px; }
+.tablewrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; color: var(--mut); font-weight: 400; font-size: 11px; border-bottom: 1px solid var(--line); padding: 4px 8px; white-space: nowrap; }
+td { padding: 5px 8px; border-bottom: 1px solid var(--line2); white-space: nowrap; }
+th.r, td.r { text-align: right; }
+tr.row { cursor: pointer; }
+tr.row:hover td { background: #121a24; }
+tr.row.open td { background: #1b2533; }
+tr.row.open td:first-child { box-shadow: inset 2px 0 0 var(--amber); }
+td .sub { color: var(--mut); font-size: 11px; margin-left: 6px; }
+.badge { font-size: 10px; padding: 0 4px; border: 1px solid #2d6a4f; color: var(--up); }
+.badge.APPROX { border-color: #6a5a2d; color: var(--amber); }
+.badge.EST { border-color: #6a2d2d; color: #ff9b9b; }
+tr.detail td { background: #0f151d; white-space: normal; padding: 10px 14px; }
+.dgrid { display: grid; grid-template-columns: minmax(220px, 1fr) 2fr; gap: 16px; }
+.dgrid svg { width: 100%; height: 90px; border: 1px solid var(--line2); }
+.dlist { display: grid; gap: 3px; }
+.dlist .item { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.flash { animation: flash 1.2s ease-out; }
+@keyframes flash { from { background: rgba(245, 166, 35, .35); } to { background: transparent; } }
+#nodata { margin: 12px 0; color: var(--mut); }
+#nodata summary { cursor: pointer; padding: 4px 0; }
+#nodata ul { list-style: none; padding: 0; margin: 6px 0; }
+#nodata li { padding: 3px 0; border-bottom: 1px solid var(--line2); }
+.panel { border: 1px solid var(--line); background: var(--panel); padding: 10px; margin: 10px 0; max-height: 50vh; overflow: auto; }
+.panel .item { padding: 4px 0; border-bottom: 1px solid var(--line2); }
+.panel summary { cursor: pointer; padding: 4px 0; }
+.panel details > div { padding-left: 14px; }
+.panel details > .link { margin: 6px 0 6px 14px; text-decoration: underline; }
+.method { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 6px; color: var(--mut); max-width: 80ch; }
+.method h2 { font-size: 12px; color: var(--amber); letter-spacing: .06em; }
+.foot { border-top: 1px solid var(--line); margin: 18px 0 24px; padding-top: 8px; font-size: 11px; }
+@media (max-width: 720px) {
+  .lp { display: none; }
+  body { padding-left: 10px; padding-right: 10px; }
+  th, td { padding-left: 5px; padding-right: 5px; }
+  tr.row td:nth-child(2) { white-space: normal; overflow-wrap: anywhere; }
+  td.ret .sub { display: none; }
+  tr.detail td { padding: 8px 6px; }
+  .dlist .item { overflow-wrap: anywhere; }
+  .dgrid { grid-template-columns: 1fr; }
+}

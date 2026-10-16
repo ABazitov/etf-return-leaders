@@ -1,0 +1,2 @@
+nasdaqtraded_sample.txt: rows of https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqtraded.txt (2026-10-08)
+legislators_sample.json: subset of https://unitedstates.github.io/congress-legislators/legislators-current.json (2026-10-08; S000250, M001218 and D000628 added from the 2026-10-15 file)

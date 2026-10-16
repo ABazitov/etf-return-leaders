@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ETF Return Leaders</title>
+<link rel="stylesheet" href="/styles.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<header class="bar" id="statusbar">
+  <span class="brand">ETF RETURN LEADERS</span>
+  <span id="market" class="mut">● …</span>
+  <span id="sources" class="mut"></span>
+  <span id="backfill" class="warn" hidden></span>
+  <button id="issues-btn" class="link warn" type="button" aria-expanded="false" aria-controls="issues">0 issues</button>
+</header>
+<section id="issues" class="panel" hidden aria-label="Data issues"></section>
+<nav class="ctl" aria-label="Controls">
+  <div role="tablist" aria-label="Group">
+    <button role="tab" class="k on" data-group="managers" aria-selected="true">MANAGERS</button>
+    <button role="tab" class="k" data-group="investors" aria-selected="false">13F</button>
+    <button role="tab" class="k" data-group="congress" aria-selected="false">CONGRESS</button>
+  </div>
+  <div class="wins" aria-label="Time window">
+    <button class="k on" data-window="1y" aria-pressed="true">1Y</button>
+    <button class="k" data-window="3y" aria-pressed="false">3Y</button>
+    <button class="k" data-window="5y" aria-pressed="false">5Y</button>
+  </div>
+  <input id="search" class="srch" type="search" placeholder="/ search" aria-label="Search names" autocomplete="off">
+  <label id="famous-wrap" class="k" hidden><input id="famous" type="checkbox"> FAMOUS ONLY</label>
+  <select id="chamber" class="k" hidden aria-label="Chamber">
+    <option value="all">HOUSE + SENATE</option><option value="House">HOUSE</option><option value="Senate">SENATE</option>
+  </select>
+</nav>
+<main>
+  <p id="caption" class="mut cap"></p>
+  <div class="tablewrap"><table id="board" data-window="1y"><thead></thead><tbody></tbody></table></div>
+  <details id="nodata"><summary>NOT ENOUGH DATA (0)</summary><ul></ul></details>
+  <section id="method" class="method">
+    <h2>METHODOLOGY</h2>
+    <p>Every number is the time-weighted return of the person's ETF holdings with dividends reinvested, over the last
+      1, 3 or 5 years ending at the latest price. 3Y and 5Y also show the yearly (annualized) rate. "vs SPX" is the
+      difference from SPY's total return over the same window, in percentage points.</p>
+    <p><b>EXACT · Fund managers.</b> The plain average of the market-price total returns of the ETFs they manage. A
+      fund counts only if they have managed it for the whole window; a tenure given only as a year counts from 31
+      December of that year. The list is hand-checked against each fund's prospectus and is not every ETF manager.</p>
+    <p><b>APPROX · Big investors (13F).</b> Quarter-end ETF share counts from SEC Form 13F, held unchanged until the
+      next report; trades between quarter-ends are invisible. Options and bonds are excluded. Listed only with at least
+      $10M in ETFs at every quarter-end in the window. "% BOOK" is the ETF value as the filer reported it, divided by
+      the reported value of all share positions in the same filing (latest quarter; hover for the average over the
+      window): the return is that of the ETF part of the book only.</p>
+    <p><b>EST · Congress.</b> Holdings rebuilt from House and Senate trade reports since 2012, each trade sized at the
+      midpoint of its reported range. The range next to each estimate shows the result if every trade were at the low
+      end or the high end of its range. Ranked only if invested on at least 95% of trading days. Members may report up
+      to 45 days late. Members report only while in office, so holdings end when a member leaves: someone who left
+      during a window is listed under "Not enough data", and someone who left before it is not listed.</p>
+    <p>Anyone who cannot be measured fairly is listed under "Not enough data" with the reason. Anything skipped or
+      doubtful is listed under issues, with a link to the original document.</p>
+  </section>
+</main>
+<footer class="foot mut">Not investment advice. Congressional reports may be used only for lawful, non-commercial
+  purposes. EXACT = from public fund prices · APPROX = from quarter-end snapshots · EST = from reported ranges.</footer>
+</body>
+</html>

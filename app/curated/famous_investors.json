@@ -1,0 +1,306 @@
+[
+  {
+    "cik": "1067983",
+    "filer_name": "BERKSHIRE HATHAWAY INC",
+    "person": "Warren Buffett",
+    "role": "Chairman Emeritus",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1067983",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1336528",
+    "filer_name": "Pershing Square Capital Management, L.P.",
+    "person": "Bill Ackman",
+    "role": "Founder and CEO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1336528",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1350694",
+    "filer_name": "Bridgewater Associates, LP",
+    "person": "Ray Dalio",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1350694",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1037389",
+    "filer_name": "RENAISSANCE TECHNOLOGIES LLC",
+    "person": "Jim Simons",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1037389",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1423053",
+    "filer_name": "CITADEL ADVISORS LLC",
+    "person": "Ken Griffin",
+    "role": "Founder and CEO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1423053",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1656456",
+    "filer_name": "Appaloosa LP",
+    "person": "David Tepper",
+    "role": "Founder and President",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1656456",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1536411",
+    "filer_name": "Duquesne Family Office LLC",
+    "person": "Stanley Druckenmiller",
+    "role": "Chairman and CIO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1536411",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "921669",
+    "filer_name": "ICAHN CARL C",
+    "person": "Carl Icahn",
+    "role": "Chairman of Icahn Enterprises",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=921669",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1061768",
+    "filer_name": "BAUPOST GROUP LLC/MA",
+    "person": "Seth Klarman",
+    "role": "CEO and Portfolio Manager",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1061768",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "949509",
+    "filer_name": "OAKTREE CAPITAL MANAGEMENT LP",
+    "person": "Howard Marks",
+    "role": "Co-Chairman",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=949509",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1167483",
+    "filer_name": "TIGER GLOBAL MANAGEMENT LLC",
+    "person": "Chase Coleman",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1167483",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1697748",
+    "filer_name": "ARK Investment Management LLC",
+    "person": "Cathie Wood",
+    "role": "Founder, CEO and CIO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1697748",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1040273",
+    "filer_name": "Third Point LLC",
+    "person": "Daniel Loeb",
+    "role": "Founder and CEO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1040273",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1166559",
+    "filer_name": "GATES FOUNDATION TRUST",
+    "person": "Bill Gates",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1166559",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1709323",
+    "filer_name": "Himalaya Capital Management LLC",
+    "person": "Li Lu",
+    "role": "Founder and Chairman",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1709323",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1569205",
+    "filer_name": "Fundsmith LLP",
+    "person": "Terry Smith",
+    "role": "Founder, CEO and CIO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1569205",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1112520",
+    "filer_name": "AKRE CAPITAL MANAGEMENT LLC",
+    "person": "Chuck Akre",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1112520",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1103804",
+    "filer_name": "VIKING GLOBAL INVESTORS LP",
+    "person": "Andreas Halvorsen",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1103804",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1061165",
+    "filer_name": "LONE PINE CAPITAL LLC",
+    "person": "Stephen Mandel",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1061165",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1135730",
+    "filer_name": "COATUE MANAGEMENT LLC",
+    "person": "Philippe Laffont",
+    "role": "Founder and Portfolio Manager",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1135730",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1273087",
+    "filer_name": "MILLENNIUM MANAGEMENT LLC",
+    "person": "Israel Englander",
+    "role": "Chairman and CEO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1273087",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "923093",
+    "filer_name": "TUDOR INVESTMENT CORP ET AL",
+    "person": "Paul Tudor Jones",
+    "role": "Founder and CIO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=923093",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1345471",
+    "filer_name": "TRIAN FUND MANAGEMENT, L.P.",
+    "person": "Nelson Peltz",
+    "role": "CEO and Founding Partner",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1345471",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1029160",
+    "filer_name": "SOROS FUND MANAGEMENT LLC",
+    "person": "George Soros",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1029160",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1791786",
+    "filer_name": "Elliott Investment Management L.P.",
+    "person": "Paul Singer",
+    "role": "Founder and Co-CEO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1791786",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1603466",
+    "filer_name": "Point72 Asset Management, L.P.",
+    "person": "Steve Cohen",
+    "role": "Chairman, CEO and Co-CIO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1603466",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1009207",
+    "filer_name": "D. E. Shaw & Co., Inc.",
+    "person": "David Shaw",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1009207",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1179392",
+    "filer_name": "TWO SIGMA INVESTMENTS, LP",
+    "person": "John Overdeck and David Siegel",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1179392",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1549575",
+    "filer_name": "Dalal Street, LLC",
+    "person": "Mohnish Pabrai",
+    "role": "Managing Partner",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1549575",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "860643",
+    "filer_name": "GARDNER RUSSO & QUINN LLC",
+    "person": "Tom Russo",
+    "role": "Managing Member",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=860643",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1553733",
+    "filer_name": "Brave Warrior Advisors, LLC",
+    "person": "Glenn Greenberg",
+    "role": "Managing Director",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1553733",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1135778",
+    "filer_name": "MILLER VALUE PARTNERS, LLC",
+    "person": "Bill Miller",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1135778",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1035674",
+    "filer_name": "PAULSON & CO. INC.",
+    "person": "John Paulson",
+    "role": "President and Portfolio Manager",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1035674",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1998597",
+    "filer_name": "JANA Partners Management, LP",
+    "person": "Barry Rosenstein",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1998597",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1418814",
+    "filer_name": "ValueAct Holdings, L.P.",
+    "person": "Mason Morfit",
+    "role": "Co-CEO and CIO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1418814",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1517137",
+    "filer_name": "Starboard Value LP",
+    "person": "Jeff Smith",
+    "role": "CEO and CIO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1517137",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "1138995",
+    "filer_name": "GLENVIEW CAPITAL MANAGEMENT, LLC",
+    "person": "Larry Robbins",
+    "role": "Founder and CEO",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1138995",
+    "verified": "2026-10-09"
+  },
+  {
+    "cik": "934639",
+    "filer_name": "MAVERICK CAPITAL LTD",
+    "person": "Lee Ainslie",
+    "role": "founder",
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=934639",
+    "verified": "2026-10-09"
+  }
+]

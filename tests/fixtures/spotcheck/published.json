@@ -1,0 +1,4 @@
+{"as_of": "2026-09-30",
+ "funds": {"SPY": {"url": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy", "1y": 0.1566, "3y_annualized": 0.2273, "5y_annualized": 0.1366},
+           "QQQ": {"url": "https://www.invesco.com/qqq-etf/en/performance.html", "1y": 0.2384, "3y_annualized": 0.2805, "5y_annualized": 0.1633},
+           "ARKK": {"url": "https://www.ark-funds.com/funds/arkk", "as_of": "2026-08-31", "note": "ARK had not published 2026-09-30 returns as of 2026-10-09; latest month-end is 2026-08-31 (page, Month-End view)", "1y": 0.1415, "3y_annualized": 0.2506, "5y_annualized": -0.0670}}}

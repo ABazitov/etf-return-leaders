@@ -1,0 +1,461 @@
+[
+  {
+    "person": "Hamilton Reiner",
+    "ticker": "JEPI",
+    "fund_name": "JPMorgan Equity Premium Income ETF",
+    "since": "2020",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525247725/d66087d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Hamilton Reiner 2020 Managing Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Raffaele Zingone",
+    "ticker": "JEPI",
+    "fund_name": "JPMorgan Equity Premium Income ETF",
+    "since": "2020",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525247725/d66087d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Raffaele Zingone 2020 Managing Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Matthew P. Bensen",
+    "ticker": "JEPI",
+    "fund_name": "JPMorgan Equity Premium Income ETF",
+    "since": "2024",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525247725/d66087d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Matthew P. Bensen 2024 Executive Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Judy Jansen",
+    "ticker": "JEPI",
+    "fund_name": "JPMorgan Equity Premium Income ETF",
+    "since": "2024",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525247725/d66087d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Judy Jansen 2024 Executive Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Hamilton Reiner",
+    "ticker": "JEPQ",
+    "fund_name": "JPMorgan Nasdaq Equity Premium Income ETF",
+    "since": "2022",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525261034/d812991d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Hamilton Reiner 2022 Managing Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Eric Moreau",
+    "ticker": "JEPQ",
+    "fund_name": "JPMorgan Nasdaq Equity Premium Income ETF",
+    "since": "2022",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525261034/d812991d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Eric Moreau 2022 Executive Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Matthew P. Bensen",
+    "ticker": "JEPQ",
+    "fund_name": "JPMorgan Nasdaq Equity Premium Income ETF",
+    "since": "2024",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525261034/d812991d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Matthew P. Bensen 2024 Executive Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Judy Jansen",
+    "ticker": "JEPQ",
+    "fund_name": "JPMorgan Nasdaq Equity Premium Income ETF",
+    "since": "2024",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525261034/d812991d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Judy Jansen 2024 Executive Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Giri Devulapally",
+    "ticker": "JGRO",
+    "fund_name": "JPMorgan Active Growth ETF",
+    "since": "2022",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525247718/d53984d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Giri Devulapally 2022 Managing Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Felise Agranoff",
+    "ticker": "JGRO",
+    "fund_name": "JPMorgan Active Growth ETF",
+    "since": "2022",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1485894/000119312525247718/d53984d497k.htm",
+    "evidence": "Portfolio Manager Managed the Fund Since Primary Title with Investment Adviser [...] Felise Agranoff 2022 Managing Director",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Sonu Kalra",
+    "ticker": "FBCG",
+    "fund_name": "Fidelity Blue Chip Growth ETF",
+    "since": "2020",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/945908/000094590825000711/filing10088.htm",
+    "evidence": "The fund is jointly and primarily managed by the team of Sonu Kalra (Co-Portfolio Manager) and Michael Kim (Co-Portfolio Manager), each of whom has managed the fund since 2020.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Michael Kim",
+    "ticker": "FBCG",
+    "fund_name": "Fidelity Blue Chip Growth ETF",
+    "since": "2020",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/945908/000094590825000711/filing10088.htm",
+    "evidence": "The fund is jointly and primarily managed by the team of Sonu Kalra (Co-Portfolio Manager) and Michael Kim (Co-Portfolio Manager), each of whom has managed the fund since 2020.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Sean Gavin",
+    "ticker": "FBCV",
+    "fund_name": "Fidelity Blue Chip Value ETF",
+    "since": "2020",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/945908/000094590825000712/filing10088.htm",
+    "evidence": "The fund is jointly and primarily managed by the team of Sean Gavin (Co-Portfolio Manager) and Anastasia Zabolotnikova (Co-Portfolio Manager), each of whom has managed the fund since 2020.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Anastasia Zabolotnikova",
+    "ticker": "FBCV",
+    "fund_name": "Fidelity Blue Chip Value ETF",
+    "since": "2020",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/945908/000094590825000712/filing10088.htm",
+    "evidence": "The fund is jointly and primarily managed by the team of Sean Gavin (Co-Portfolio Manager) and Anastasia Zabolotnikova (Co-Portfolio Manager), each of whom has managed the fund since 2020.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Sammy Simnegar",
+    "ticker": "FMAG",
+    "fund_name": "Fidelity Magellan ETF",
+    "since": "2021",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/945908/000094590825000720/filing10088.htm",
+    "evidence": "The fund is jointly and primarily managed by the team of Sammy Simnegar (Co-Portfolio Manager) and Tim Gannon (Co-Portfolio Manager), each of whom has managed the fund since 2021.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Tim Gannon",
+    "ticker": "FMAG",
+    "fund_name": "Fidelity Magellan ETF",
+    "since": "2021",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/945908/000094590825000720/filing10088.htm",
+    "evidence": "The fund is jointly and primarily managed by the team of Sammy Simnegar (Co-Portfolio Manager) and Tim Gannon (Co-Portfolio Manager), each of whom has managed the fund since 2021.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Jay A. Beidler",
+    "ticker": "DSTL",
+    "fund_name": "Distillate U.S. Fundamental Stability & Value ETF",
+    "since": "2023-04",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1540305/000089418926003119/dstlsummary.htm",
+    "evidence": "Messrs. Beidler and Swanson have been portfolio managers of the Fund since April 2023.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Matthew T. Swanson",
+    "ticker": "DSTL",
+    "fund_name": "Distillate U.S. Fundamental Stability & Value ETF",
+    "since": "2023-04",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1540305/000089418926003119/dstlsummary.htm",
+    "evidence": "Messrs. Beidler and Swanson have been portfolio managers of the Fund since April 2023.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Kevin Simpson",
+    "ticker": "DIVO",
+    "fund_name": "Amplify CWP Enhanced Dividend Income ETF",
+    "since": "2016",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1633061/000121390026008341/ea0273008-14_497k.htm",
+    "evidence": "Kevin Simpson, Founder and Chief Executive Officer of Capital Wealth Planning [...] Each portfolio manager has served as part of the portfolio management team of the Fund since its inception in 2016.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Josh Smith",
+    "ticker": "DIVO",
+    "fund_name": "Amplify CWP Enhanced Dividend Income ETF",
+    "since": "2016",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1633061/000121390026008341/ea0273008-14_497k.htm",
+    "evidence": "Josh Smith, CFA, Chief Investment Officer at Capital Wealth Planning [...] Each portfolio manager has served as part of the portfolio management team of the Fund since its inception in 2016.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Dustin Lewellyn",
+    "ticker": "DIVO",
+    "fund_name": "Amplify CWP Enhanced Dividend Income ETF",
+    "since": "2016",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1633061/000121390026008341/ea0273008-14_497k.htm",
+    "evidence": "Dustin Lewellyn, CFA, Chief Investment Officer at Penserra [...] Each portfolio manager has served as part of the portfolio management team of the Fund since its inception in 2016.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Ernesto Tong",
+    "ticker": "DIVO",
+    "fund_name": "Amplify CWP Enhanced Dividend Income ETF",
+    "since": "2016",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1633061/000121390026008341/ea0273008-14_497k.htm",
+    "evidence": "Ernesto Tong, CFA, Managing Director at Penserra [...] Each portfolio manager has served as part of the portfolio management team of the Fund since its inception in 2016.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Christine Johanson",
+    "ticker": "DIVO",
+    "fund_name": "Amplify CWP Enhanced Dividend Income ETF",
+    "since": "2016",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1633061/000121390026008341/ea0273008-14_497k.htm",
+    "evidence": "Christine Johanson, Director at Penserra [...] Each portfolio manager has served as part of the portfolio management team of the Fund since its inception in 2016.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Eduardo Repetto",
+    "ticker": "AVUV",
+    "fund_name": "Avantis U.S. Small Cap Value ETF",
+    "since": "2019-09-24",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm",
+    "evidence": "Eduardo Repetto, Chief Investment Officer of Avantis Investors, has been a member of the team that manages the fund since its inception. [...] Avantis U.S. Small Cap Value ETF Shares Return Before Taxes 9.33% 14.12% 15.13% 09/24/2019",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Mitchell Firestein",
+    "ticker": "AVUV",
+    "fund_name": "Avantis U.S. Small Cap Value ETF",
+    "since": "2019-09-24",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm",
+    "evidence": "Mitchell Firestein, Senior Portfolio Manager, has been a member of the team that manages the fund since its inception. [...] Avantis U.S. Small Cap Value ETF Shares Return Before Taxes 9.33% 14.12% 15.13% 09/24/2019",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Daniel Ong",
+    "ticker": "AVUV",
+    "fund_name": "Avantis U.S. Small Cap Value ETF",
+    "since": "2019-09-24",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm",
+    "evidence": "Daniel Ong, Senior Portfolio Manager, has been a member of the team that manages the fund since its inception. [...] Avantis U.S. Small Cap Value ETF Shares Return Before Taxes 9.33% 14.12% 15.13% 09/24/2019",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Ted Randall",
+    "ticker": "AVUV",
+    "fund_name": "Avantis U.S. Small Cap Value ETF",
+    "since": "2019-09-24",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm",
+    "evidence": "Ted Randall, Senior Portfolio Manager, has been a member of the team that manages the fund since its inception. [...] Avantis U.S. Small Cap Value ETF Shares Return Before Taxes 9.33% 14.12% 15.13% 09/24/2019",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Matthew Dubin",
+    "ticker": "AVUV",
+    "fund_name": "Avantis U.S. Small Cap Value ETF",
+    "since": "2021",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000416/acetftavuv497k.htm",
+    "evidence": "Matthew Dubin, Portfolio Manager, has been a member of the team that manages the fund since 2021.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Eduardo Repetto",
+    "ticker": "AVDV",
+    "fund_name": "Avantis International Small Cap Value ETF",
+    "since": "2019-09-24",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000402/acetftavdv497k.htm",
+    "evidence": "Eduardo Repetto, Chief Investment Officer of Avantis Investors, has been a member of the team that manages the fund since its inception. [...] Avantis International Small Cap Value ETF Shares Return Before Taxes 8.47% 6.35% 8.20% 09/24/2019",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Mitchell Firestein",
+    "ticker": "AVDV",
+    "fund_name": "Avantis International Small Cap Value ETF",
+    "since": "2019-09-24",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000402/acetftavdv497k.htm",
+    "evidence": "Mitchell Firestein, Senior Portfolio Manager, has been a member of the team that manages the fund since its inception. [...] Avantis International Small Cap Value ETF Shares Return Before Taxes 8.47% 6.35% 8.20% 09/24/2019",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Daniel Ong",
+    "ticker": "AVDV",
+    "fund_name": "Avantis International Small Cap Value ETF",
+    "since": "2019-09-24",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000402/acetftavdv497k.htm",
+    "evidence": "Daniel Ong, Senior Portfolio Manager, has been a member of the team that manages the fund since its inception. [...] Avantis International Small Cap Value ETF Shares Return Before Taxes 8.47% 6.35% 8.20% 09/24/2019",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Ted Randall",
+    "ticker": "AVDV",
+    "fund_name": "Avantis International Small Cap Value ETF",
+    "since": "2019-09-24",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000402/acetftavdv497k.htm",
+    "evidence": "Ted Randall, Senior Portfolio Manager, has been a member of the team that manages the fund since its inception. [...] Avantis International Small Cap Value ETF Shares Return Before Taxes 8.47% 6.35% 8.20% 09/24/2019",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Matthew Dubin",
+    "ticker": "AVDV",
+    "fund_name": "Avantis International Small Cap Value ETF",
+    "since": "2021",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1710607/000171060725000402/acetftavdv497k.htm",
+    "evidence": "Matthew Dubin, Portfolio Manager, has been a member of the team that manages the fund since 2021.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Philip Hodges",
+    "ticker": "DYNF",
+    "fund_name": "iShares U.S. Equity Factor Rotation Active ETF",
+    "since": "2019-03",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1761055/000119312526170983/d102501d497k.htm",
+    "evidence": "Mr. Hodges has been a Portfolio Manager of the Fund since March 2019.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Jeff Shen",
+    "ticker": "DYNF",
+    "fund_name": "iShares U.S. Equity Factor Rotation Active ETF",
+    "since": "2026-04",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1761055/000119312526170983/d102501d497k.htm",
+    "evidence": "Mr. Shen and Ms. Lee have been Portfolio Managers of the Fund since April 2026.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Stephanie Lee",
+    "ticker": "DYNF",
+    "fund_name": "iShares U.S. Equity Factor Rotation Active ETF",
+    "since": "2026-04",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1761055/000119312526170983/d102501d497k.htm",
+    "evidence": "Mr. Shen and Ms. Lee have been Portfolio Managers of the Fund since April 2026.",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Paul Greene",
+    "ticker": "TCHP",
+    "fund_name": "T. Rowe Price Blue Chip Growth ETF",
+    "since": "2021",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1795351/000199937126004345/bcx-497k_030126.htm",
+    "evidence": "Name Title Managed Fund Since Joined Investment Adviser [...] Paul Greene Portfolio Manager and Chair of Investment Advisory Committee 2021 2006",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Jodi Love",
+    "ticker": "TVAL",
+    "fund_name": "T. Rowe Price Value ETF",
+    "since": "2023",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1795351/000199937126004372/vlx-497k_030126.htm",
+    "evidence": "Name Title Managed Fund Since Joined Investment Adviser [...] Jodi Love Portfolio Manager and Chair of Investment Advisory Committee 2023",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Don Peters",
+    "ticker": "TVAL",
+    "fund_name": "T. Rowe Price Value ETF",
+    "since": "2023",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1795351/000199937126004372/vlx-497k_030126.htm",
+    "evidence": "Name Title Managed Fund Since Joined Investment Adviser [...] Don Peters Co-Portfolio Manager 2023",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Gabe Solomon",
+    "ticker": "TVAL",
+    "fund_name": "T. Rowe Price Value ETF",
+    "since": "2023",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1795351/000199937126004372/vlx-497k_030126.htm",
+    "evidence": "Name Title Managed Fund Since Joined Investment Adviser [...] Gabe Solomon Co-Portfolio Manager 2023",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Christopher D. Buchbinder",
+    "ticker": "CGDV",
+    "fund_name": "Capital Group Dividend Value ETF",
+    "since": "2022",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1870128/000005193126000736/cgdv497k.htm",
+    "evidence": "Portfolio manager/ Fund title (if applicable) Portfolio manager in this fund since: Primary title with investment adviser [...] Christopher D. Buchbinder President 2022 Partner – Capital Research Global Investors",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Brittain Ezzes",
+    "ticker": "CGDV",
+    "fund_name": "Capital Group Dividend Value ETF",
+    "since": "2025",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1870128/000005193126000736/cgdv497k.htm",
+    "evidence": "Portfolio manager/ Fund title (if applicable) Portfolio manager in this fund since: Primary title with investment adviser [...] Brittain Ezzes 2025 Partner – Capital Research Global Investors",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Martin Jacobs",
+    "ticker": "CGDV",
+    "fund_name": "Capital Group Dividend Value ETF",
+    "since": "2022",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1870128/000005193126000736/cgdv497k.htm",
+    "evidence": "Portfolio manager/ Fund title (if applicable) Portfolio manager in this fund since: Primary title with investment adviser [...] Martin Jacobs 2022 Partner – Capital Research Global Investors",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "James B. Lovelace",
+    "ticker": "CGDV",
+    "fund_name": "Capital Group Dividend Value ETF",
+    "since": "2022",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1870128/000005193126000736/cgdv497k.htm",
+    "evidence": "Portfolio manager/ Fund title (if applicable) Portfolio manager in this fund since: Primary title with investment adviser [...] James B. Lovelace 2022 Partner – Capital Research Global Investors",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Adam Ward",
+    "ticker": "CGDV",
+    "fund_name": "Capital Group Dividend Value ETF",
+    "since": "2026",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1870128/000005193126000736/cgdv497k.htm",
+    "evidence": "Portfolio manager/ Fund title (if applicable) Portfolio manager in this fund since: Primary title with investment adviser [...] Adam Ward 2026 Partner – Capital Research Global Investors",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Catherine D. Wood",
+    "ticker": "ARKF",
+    "fund_name": "ARK Blockchain & Fintech Innovation ETF",
+    "since": "2019-02-04",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1579982/000121390025115994/ea0266434-04_497k.htm",
+    "evidence": "The following individual has been primarily responsible for the day-to-day management of the Fund’s portfolio since the inception of the Fund: Catherine D. Wood. [...] The Fund commenced operations on February 4, 2019",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Catherine D. Wood",
+    "ticker": "ARKX",
+    "fund_name": "ARK Space & Defense Innovation ETF",
+    "since": "2021-03-30",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1579982/000121390025115997/ea0266434-07_497k.htm",
+    "evidence": "The following individual has been primarily responsible for the day-to-day management of the Fund’s portfolio since the inception of the Fund: Catherine D. Wood. [...] The Fund commenced operations on March 30, 2021",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Catherine D. Wood",
+    "ticker": "ARKK",
+    "fund_name": "ARK Innovation ETF",
+    "since": "2014-10-31",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1579982/000121390025115992/ea0266434-02_497k.htm",
+    "evidence": "Summary prospectus (497K, Nov 30, 2025): The following individual has been primarily responsible for the day-to-day management of the Fund’s portfolio since the inception of the Fund: Catherine D. Wood. [...] ARK ETF Trust N-CSR (filed 2018-10-02, https://www.sec.gov/Archives/edgar/data/1579982/000114420418051987/tv501825_ncsr.htm): ARKK’s inception date is 10/31/14",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Catherine D. Wood",
+    "ticker": "ARKW",
+    "fund_name": "ARK Next Generation Technology ETF",
+    "since": "2014-09-30",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1579982/000121390025115993/ea0266434-03_497k.htm",
+    "evidence": "Summary prospectus (497K, Nov 30, 2025): The following individual has been primarily responsible for the day-to-day management of the Fund’s portfolio since the inception of the Fund: Catherine D. Wood. [...] ARK ETF Trust N-CSR (filed 2018-10-02, https://www.sec.gov/Archives/edgar/data/1579982/000114420418051987/tv501825_ncsr.htm): ARKW’s inception date is 9/30/14",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Catherine D. Wood",
+    "ticker": "ARKG",
+    "fund_name": "ARK Genomic Revolution ETF",
+    "since": "2014-10-31",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1579982/000121390025115995/ea0266434-05_497k.htm",
+    "evidence": "Summary prospectus (497K, Nov 30, 2025): The following individual has been primarily responsible for the day-to-day management of the Fund’s portfolio since the inception of the Fund: Catherine D. Wood. [...] ARK ETF Trust N-CSR (filed 2018-10-02, https://www.sec.gov/Archives/edgar/data/1579982/000114420418051987/tv501825_ncsr.htm): ARKG’s inception date is 10/31/14",
+    "verified": "2026-10-09"
+  },
+  {
+    "person": "Catherine D. Wood",
+    "ticker": "ARKQ",
+    "fund_name": "ARK Autonomous Technology & Robotics ETF",
+    "since": "2014-09-30",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1579982/000121390025115996/ea0266434-06_497k.htm",
+    "evidence": "Summary prospectus (497K, Nov 30, 2025): The following individual has been primarily responsible for the day-to-day management of the Fund’s portfolio since the inception of the Fund: Catherine D. Wood. [...] ARK ETF Trust N-CSR (filed 2018-10-02, https://www.sec.gov/Archives/edgar/data/1579982/000114420418051987/tv501825_ncsr.htm): ARKQ’s inception date is 9/30/14",
+    "verified": "2026-10-09"
+  }
+]

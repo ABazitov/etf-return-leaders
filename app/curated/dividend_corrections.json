@@ -1,0 +1,10 @@
+[
+  {
+    "ticker": "ARKK",
+    "ex_date": "2023-09-08",
+    "action": "remove",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1579982/000121390024086296/ea0212307-01_ncsr.htm",
+    "evidence": "ARK Innovation ETF, Statements of Changes in Net Assets, Year Ended July 31, 2024: Distributions from distributable earnings — (none)",
+    "verified": "2026-10-09"
+  }
+]

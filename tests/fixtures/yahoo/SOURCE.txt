@@ -1,0 +1,1 @@
+Yahoo chart/spark API responses captured 2026-10-08 (query1.finance.yahoo.com/v8/finance/chart|spark)

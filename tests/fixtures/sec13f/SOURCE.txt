@@ -1,0 +1,9 @@
+Rows for accession 0001172661-26-003822 (Diameter Capital Partners LP, 13F-HR/A RESTATEMENT, period 30-JUN-2026)
+extracted unchanged from SEC Form 13F data set 01jun2026-31aug2026_form13f.zip
+https://www.sec.gov/files/datastandardsinnovation/data/form-13f-data-sets/01jun2026-31aug2026_form13f.zip
+Filing: https://www.sec.gov/Archives/edgar/data/1727012/000117266126003822/
+Extracted 2026-10-08.
+diameter_infotable.xml, diameter_primary_doc.xml: https://www.sec.gov/Archives/edgar/data/1727012/000117266126003822/
+form.20260814.trimmed.idx: header + selected lines of https://www.sec.gov/Archives/edgar/daily-index/2026/QTR3/form.20260814.idx
+current_13F-HR.atom: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=13F-HR&count=40&output=atom (2026-10-08 17:51 ET)
+datasets_page.html: https://www.sec.gov/data-research/sec-markets-data/form-13f-data-sets

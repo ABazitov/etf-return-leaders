@@ -1,0 +1,4 @@
+Senate eFD captures, 2026-10-08, via browser after accepting the eFD terms (personal non-commercial use).
+search_2026.json: POST https://efdsearch.senate.gov/search/report/data/ report_types=[11], submitted from 01/01/2026
+ptr_*.html / paper_*.html: https://efdsearch.senate.gov/search/view/{ptr|paper}/<uuid>/
+ptr_26ae70ce-...: cached from data/raw/senate/ (run 1); its '#' column repeats 7 (rows 7,6,5,4,3,2,7).

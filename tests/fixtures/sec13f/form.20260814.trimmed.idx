@@ -1,0 +1,19 @@
+Description:           Daily Index of EDGAR Dissemination Feed by Form Type
+Last Data Received:    Aug 14, 2026
+Comments:              webmaster@sec.gov
+Anonymous FTP:         ftp://ftp.sec.gov/edgar/
+ 
+ 
+ 
+ 
+Form Type   Company Name                                                  CIK
+      Date Filed  File Name
+---------------------------------------------------------------------------------------------------------------------------------------------
+1-A              Deedflow INC                                                  2143384     20260814    edgar/data/2143384/0001683168-26-006495.txt                                                
+1-A POS          Park View OZ REIT Inc                                         1824204     20260814    edgar/data/1824204/0001214659-26-010435.txt                                                
+13F-HR           &PARTNERS                                                     107136      20260814    edgar/data/107136/0001214659-26-010148.txt                                                
+13F-HR           10Elms LLP                                                    2056650     20260814    edgar/data/2056650/0002056650-26-000004.txt                                                
+13F-HR           11 Capital Partners LP                                        1801172     20260814    edgar/data/1801172/0000902664-26-003493.txt                                                
+13F-HR           12 West Capital Management LP                                 1540531     20260814    edgar/data/1540531/0001540531-26-000005.txt                                                
+13F-HR           Diameter Capital Partners LP                                  1727012     20260814    edgar/data/1727012/0001172661-26-003510.txt                                                
+13F-HR/A         Diameter Capital Partners LP                                  1727012     20260814    edgar/data/1727012/0001172661-26-003822.txt                                                
