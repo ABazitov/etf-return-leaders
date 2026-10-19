@@ -1,5 +1,5 @@
 "use strict";
-const S = { group: "managers", win: "1y", q: "", famous: false, chamber: "all", board: null, version: null,
+const S = { group: "managers", win: "1y", q: "", famous: false, chamber: "all", minBook: 0.1, board: null, version: null, status: null,
             open: new Set(), prev: new Map(), seq: 0, details: new Map() };
 const $ = (s) => document.querySelector(s);
 
@@ -43,34 +43,73 @@ async function api(path) {
   return r.json();
 }
 
-const RET = { h: "RET", cls: "r ret", cell: (r) => {
+const plural = (n, word) => `${n.toLocaleString("en-US")} ${word}${n === 1 ? "" : "s"}`;
+// What a row rests on: how many funds, quarterly reports or trades, and the share of value that could be priced.
+function basis(r) {
+  const n = S.group === "managers" ? (r.funds ? plural(r.funds.length, "fund") : null)
+    : S.group === "investors" ? (r.n_periods === undefined ? null : plural(r.n_periods, "quarter"))
+    : (r.n_trades === undefined ? null : plural(r.n_trades, "trade"));
+  if (n === null) return "—";
+  return r.priced_share === undefined || r.priced_share === null ? n : `${n} · ${Math.floor(r.priced_share * 1000) / 10}% priced`;
+}
+const BASIS = { h: "BASIS", cls: "r lp", t: "What the number rests on: funds, quarterly reports or trades, and the share of their value that could be priced",
+  cell: (r) => [el("span", { class: "mut", text: basis(r) })] };
+const RET = { h: "RET", cls: "r ret", t: "Total return over the window, dividends reinvested", cell: (r) => {
   const main = el("span", { class: "main " + tone(r.total), text: pct(r.total) });
   if (S.group === "congress" && r.low !== undefined) return [main, el("span", { class: "sub", text: pct(r.low) + "…" + pct(r.high) })];
   return [main];
 } };
-const YR = { h: "/YR", cls: "r yr", cell: (r) => [el("span", { class: tone(r.annualized), text: pct(r.annualized) })] };
-const VS = { h: "vs SPX", cls: "r", cell: (r) => [el("span", { class: tone(r.vs_spx), text: pp(r.vs_spx) })] };
-const BADGE = { h: "", cls: "", cell: (r) => [el("span", { class: "badge " + r.badge, text: r.badge })] };
+const YR = { h: "/YR", cls: "r yr", t: "The same return as a yearly rate", cell: (r) => [el("span", { class: tone(r.annualized), text: pct(r.annualized) })] };
+const VS = { h: "vs SPX", cls: "r", t: "Percentage points above (+) or below (−) buying the S&P 500 (SPY) over the same dates", cell: (r) => [el("span", { class: tone(r.vs_spx), text: pp(r.vs_spx) })] };
+const BADGE = { h: "", cls: "", t: "EXACT = from public fund prices · APPROX = from quarter-end snapshots · EST = from reported ranges", cell: (r) => [el("span", { class: "badge " + r.badge, text: r.badge })] };
 const RANK = { h: "#", cls: "", cell: (r) => [String(r.rank)] };
 const COLS = {
   managers: [RANK, { h: "NAME", cls: "", cell: (r) => [r.name] },
-    { h: "FUNDS", cls: "mut lp", cell: (r) => [(r.funds || []).join(" ")] }, RET, YR, VS, BADGE],
+    { h: "FUNDS", cls: "mut lp", t: "Funds they managed for the whole window", cell: (r) => [(r.funds || []).join(" ")] }, RET, YR, VS, BASIS, BADGE],
   investors: [RANK, { h: "NAME", cls: "", cell: (r) => [r.name, r.person ? el("span", { class: "sub", text: r.person }) : null] },
-    { h: "ETF $", cls: "r lp", cell: (r) => [usd(r.etf_value_usd)] },
-    { h: "% BOOK", cls: "r lp", cell: (r) => [el("span", { text: share(r.etf_share),
+    { h: "ETF $", cls: "r lp", t: "Value of their ETFs at the latest quarterly report", cell: (r) => [usd(r.etf_value_usd)] },
+    { h: "% BOOK", cls: "r lp", t: "ETFs as a share of all the shares they reported (latest quarter): low means the ETF return says little about them", cell: (r) => [el("span", { text: share(r.etf_share),
       title: r.etf_share_avg === null || r.etf_share_avg === undefined ? null : "average over the window: " + share(r.etf_share_avg) })] },
     { h: "ETFS", cls: "r lp", cell: (r) => [String(r.n_etfs ?? "—")] },
-    { h: "TOP", cls: "lp", cell: (r) => [r.top_etf || "—"] }, RET, YR, VS, BADGE],
+    { h: "TOP", cls: "lp", t: "Their largest ETF", cell: (r) => [r.top_etf || "—"] }, RET, YR, VS, BASIS, BADGE],
   congress: [RANK, { h: "NAME", cls: "", cell: (r) => [r.name] }, { h: "P-ST", cls: "", cell: (r) => [r.party_state] },
-    { h: "CH", cls: "lp", cell: (r) => [r.chamber ? r.chamber[0] : ""] }, { h: "TRADES", cls: "r lp", cell: (r) => [String(r.n_trades ?? "—")] },
-    { h: "TOP", cls: "lp", cell: (r) => [r.top_etf || "—"] }, RET, YR, VS, BADGE],
+    { h: "CH", cls: "lp", cell: (r) => [r.chamber ? r.chamber[0] : ""] }, { h: "TRADES", cls: "r lp", t: "ETF trades reported in the window", cell: (r) => [String(r.n_trades ?? "—")] },
+    { h: "TOP", cls: "lp", t: "Their largest ETF", cell: (r) => [r.top_etf || "—"] }, RET, YR, VS, BADGE],
 };
 const cols = () => COLS[S.group].filter((c) => S.win !== "1y" || !c.cls.includes("yr"));
+
+const bookOk = (r) => !S.minBook || r.etf_share === null || r.etf_share === undefined || r.etf_share >= S.minBook;
+const GROUP = { managers: "Fund managers", investors: "Big investors (13F)", congress: "Members of Congress" };
+
+// One plain-words answer per board: how many beat the S&P 500, the typical gap, and who did it in every window.
+function headline(b, rows) {
+  if (!rows.length) return "";
+  const beat = rows.filter((r) => r.vs_spx > 0).length;
+  const gaps = rows.map((r) => r.vs_spx).sort((x, y) => x - y), m = gaps.length >> 1;
+  const median = gaps.length % 2 ? gaps[m] : (gaps[m - 1] + gaps[m]) / 2;
+  let s = `${GROUP[S.group]}, ${b.years} year${b.years > 1 ? "s" : ""}: ${beat.toLocaleString("en-US")} of ${rows.length.toLocaleString("en-US")} ranked ${rows.length === 1 ? "person" : "people"} `
+    + `beat the S&P 500 (${Math.round(beat / rows.length * 100)}%). The median was ${Math.abs(median).toFixed(1)} points ${median >= 0 ? "ahead" : "behind"}.`;
+  const all3 = rows.filter((r) => r.beats && Object.keys(r.beats).length === 3);
+  if (all3.length) s += ` Of the ${all3.length.toLocaleString("en-US")} ranked over 1, 3 and 5 years, `
+    + `${all3.filter((r) => Object.values(r.beats).every(Boolean)).length.toLocaleString("en-US")} beat it in all three.`;
+  return s;
+}
+
+function senateNote() {
+  const st = S.status;
+  if (S.group !== "congress" || !st) return "";
+  if (!st.senate_enabled) return "Senate reports are not included (turned off in config.toml): this board covers the House only.";
+  const sen = st.sources.senate;
+  if (sen && !sen.stale) return "";
+  return `Senate reports may be incomplete: the last successful Senate update was ${sen ? ago(sen.age_seconds) : "never"}`
+    + `${sen && sen.age_seconds !== null ? " ago" : ""} (the Senate site often refuses automated downloads).`;
+}
 
 function visible(rows) {
   const q = S.q.trim().toLowerCase();
   return rows.filter((r) => (!q || (r.name + " " + (r.person || "")).toLowerCase().includes(q))
     && (S.group !== "investors" || !S.famous || r.person)
+    && (S.group !== "investors" || bookOk(r))
     && (S.group !== "congress" || S.chamber === "all" || r.chamber === S.chamber));
 }
 
@@ -80,7 +119,7 @@ function render() {
   const focusId = document.activeElement && document.activeElement.matches && document.activeElement.matches("tr.row") ? document.activeElement.dataset.id : null;
   const table = $("#board");
   table.dataset.window = S.win;
-  const head = el("tr", {}, cols().map((c) => el("th", { class: c.cls, scope: "col", text: c.h })));
+  const head = el("tr", {}, cols().map((c) => el("th", { class: c.cls, scope: "col", text: c.h, title: c.t || null })));
   table.tHead.replaceChildren(head);
   const body = [];
   for (const r of visible(b.ranked)) {
@@ -93,8 +132,14 @@ function render() {
   }
   table.tBodies[0].replaceChildren(...body);
   if (focusId !== null) { const f = document.querySelector(`tr.row[data-id="${CSS.escape(focusId)}"]`); if (f) f.focus(); }
+  $("#headline").textContent = headline(b, visible(b.ranked));
+  const note = senateNote();
+  $("#note").hidden = !note;
+  $("#note").textContent = note;
   const years = b.years;
-  $("#caption").textContent = `${years}-year total return${years > 1 ? " (and per year)" : ""}, dividends reinvested · ${b.start} → ${b.end} · S&P 500 (SPY): ${pct(b.benchmark.total)}`;
+  const hidden = S.group === "investors" && S.minBook ? b.ranked.filter((r) => !bookOk(r)).length : 0;
+  $("#caption").textContent = `${years}-year total return${years > 1 ? " (and per year)" : ""}, dividends reinvested · ${b.start} → ${b.end} · S&P 500 (SPY): ${pct(b.benchmark.total)}`
+    + (hidden ? ` · ${hidden.toLocaleString("en-US")} ranked filers with ETFs under ${Math.round(S.minBook * 100)}% of their book hidden` : "");
   const nd = visible(b.unranked);
   $("#nodata summary").textContent = `NOT ENOUGH DATA (${nd.length})`;
   $("#nodata ul").replaceChildren(...nd.map((r) => el("li", {}, el("span", { text: r.name }), el("span", { class: "sub", text: "— " + r.reason }))));
@@ -139,6 +184,12 @@ function detailContent(r, group, board) {
       t.priced ? null : el("span", { class: "warn", text: "unpriced" }), link(t.url, "↗ report")));
     for (const n of d.notes || []) items.push(el("div", { class: "item warn", text: n.ref + ": " + n.message }));
     if (r.low !== undefined) items.unshift(el("div", { class: "item mut", text: `Estimate ${pct(r.total)}; if every trade were at the low end of its range ${pct(r.low)}, at the high end ${pct(r.high)}.` }));
+  }
+  if (r.total !== undefined && r.vs_spx !== undefined) {
+    const gap = r.vs_spx >= 0 ? `${pp(r.vs_spx)} points ahead of` : `${pp(r.vs_spx).slice(1)} points behind`;
+    const wins = r.beats ? " Beat the S&P 500: " + ["1y", "3y", "5y"].map((w) => `${w.toUpperCase()} ${w in r.beats ? (r.beats[w] ? "yes" : "no") : "not ranked"}`).join(" · ") + "." : "";
+    items.unshift(el("div", { class: "item" }, `Return ${pct(r.total)} against ${pct(board.benchmark.total)} for the S&P 500 over the same dates: ${gap} it.`
+      + ` Based on ${basis(r)}.${wins}`));
   }
   if (r.reason) items.unshift(el("div", { class: "item warn", text: r.reason }));
   return el("div", { class: "dgrid" }, left, el("div", { class: "dlist" }, items));
@@ -186,6 +237,9 @@ async function loadBoard(flash) {
 async function poll() {
   try {
     const st = await api("/api/status");
+    const first = S.status === null;
+    S.status = st;
+    if (first) render();
     const m = $("#market");
     m.textContent = st.market.open ? `● MKT OPEN ${new Date(st.market.as_of).toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hour12: false })} ET` : "● MKT CLOSED";
     m.className = st.market.open ? "open" : "mut";
@@ -243,12 +297,28 @@ function issueGroup(g) {
   return box;
 }
 
+// Plain words for the biggest kinds, so a long list reads as checks that worked rather than as breakage.
+const KIND_TEXT = {
+  "x2-mismatch": "13F positions whose reported value is more than 10% away from shares × price (often a filing in the wrong units); these positions are left out",
+  "scanned": "scanned or handwritten reports, which cannot be read",
+  "x6-irregular-dividend": "unusual dividends, flagged for review only",
+};
+function issuesIntro(groups) {
+  const total = groups.reduce((n, g) => n + g.count, 0);
+  if (!total) return "";
+  const top = groups.reduce((a, g) => (g.count > a.count ? g : a));
+  return el("p", { class: "mut" }, `${plural(total, "item")} ${total === 1 ? "was" : "were"} left out or flagged by the data checks. `
+    + `The largest group (${Math.round(top.count / total * 100)}%): ${top.count.toLocaleString("en-US")} ${KIND_TEXT[top.kind] || top.source + " · " + top.kind}. `
+    + "No return uses an item that was left out, and a row is ranked only if at least 95% of its value is priced. "
+    + "Open a group to see each item and its source document.");
+}
+
 async function showIssues() {
   const panel = $("#issues"), btn = $("#issues-btn");
   if (!panel.hidden) { panel.hidden = true; btn.setAttribute("aria-expanded", "false"); return; }
   try {
     const groups = await api("/api/issues/summary");
-    panel.replaceChildren(...groups.map(issueGroup));
+    panel.replaceChildren(issuesIntro(groups), ...groups.map(issueGroup));
     if (!groups.length) panel.textContent = "No open issues.";
   } catch (e) {
     panel.textContent = "Could not load issues: " + e.message;
@@ -262,6 +332,7 @@ function setGroup(g) {
   S.open.clear();
   for (const b of document.querySelectorAll("button[data-group]")) { const on = b.dataset.group === g; b.classList.toggle("on", on); b.setAttribute("aria-selected", on); }
   $("#famous-wrap").hidden = g !== "investors";
+  $("#minbook").hidden = g !== "investors";
   $("#chamber").hidden = g !== "congress";
   loadBoard(false).catch(showComputing);
 }
@@ -278,6 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#search").addEventListener("input", (e) => { S.q = e.target.value; render(); });
   $("#famous").addEventListener("change", (e) => { S.famous = e.target.checked; render(); });
   $("#chamber").addEventListener("change", (e) => { S.chamber = e.target.value; render(); });
+  $("#minbook").addEventListener("change", (e) => { S.minBook = Number(e.target.value); render(); });
   $("#issues-btn").addEventListener("click", showIssues);
   document.addEventListener("keydown", (e) => {
     if (e.ctrlKey || e.metaKey || e.altKey) return;

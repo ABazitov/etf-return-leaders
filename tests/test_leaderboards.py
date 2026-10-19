@@ -8,8 +8,8 @@ from app.congress_sim import parse_amount
 from app.curated import ManagerFund
 from app.leaderboards import (
     CTrade, DenseSeries, FilerHistory, MemberInfo, Position, PriceBook, assemble, congress_board,
-    investors_board, last_quarter_end_on_or_before, latest_due_quarter, make_window, managers_board,
-    quarter_ends_between, strip_detail,
+    investors_board, last_quarter_end_on_or_before, latest_due_quarter, make_window, managers_board, required_periods,
+    UNPRICED_MAX, quarter_ends_between, strip_detail,
 )
 from app.returns import simple_return, twr
 
@@ -111,6 +111,7 @@ def test_investor_ranked_matches_holding_return():
     [row] = ranked
     assert row["total"] == pytest.approx(simple_return(TRI["AAA"], w.start, w.end), rel=1e-9)
     assert row["badge"] == "APPROX" and row["n_etfs"] == 1 and row["top_etf"] == "AAA"
+    assert row["n_periods"] == len(required_periods(h.periods, w, TODAY)) and row["priced_share"] == 1.0
     assert unranked == [] and issues == []
 
 
@@ -249,6 +250,7 @@ def test_congress_trades_from_an_earlier_time_in_office_are_not_counted():
     trades = {"M1": [CT("r1", "AAA", "buy", date(2018, 3, 5)), CT("r2", "BBB", "buy", date(2021, 3, 1))]}
     [row], _ = congress_board(served(((2015, 1, 6), (2019, 1, 3)), ((2021, 1, 3), (2027, 1, 3))), trades, BOOK, w, spy(w))
     assert row["total"] == pytest.approx(simple_return(TRI["BBB"], w.start, w.end)) and row["n_trades"] == 1
+    assert row["priced_share"] == 1.0
     assert {"ref": "until 2019-01-03", "message": "1 trade from an earlier time in office not counted: holdings "
                                                    "end when a member leaves office"} in row["detail"]["notes"]
 
@@ -311,6 +313,7 @@ def test_investor_small_gapped_position_dropped_stays_ranked():
         plan[q] = pos
     ranked, unranked, _ = investors_board([hist_manual("8", "Mostly", plan)], {}, book, w, spy_t, TODAY)
     assert len(ranked) == 1 and unranked == []
+    assert 1 - UNPRICED_MAX <= ranked[0]["priced_share"] < 1        # the worst quarter, with CCC unpriced
 
 
 def test_congress_gapped_etf_unranked_not_crash():

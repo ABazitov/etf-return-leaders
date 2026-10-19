@@ -30,11 +30,12 @@ def build(path: Path) -> None:
         for group in ("managers", "investors", "congress"):
             for win, years in (("1y", 1), ("3y", 3), ("5y", 5)):
                 extra = {"investors": {"badge": "APPROX", "etf_value_usd": 2.5e8, "etf_share": 0.042, "etf_share_avg": 0.05,
-                                       "n_etfs": 3, "top_etf": "IAU", "person": ""},
+                                       "n_etfs": 3, "top_etf": "IAU", "person": "", "n_periods": 4, "priced_share": 0.987},
                          "congress": {"badge": "EST", "party_state": "D-CA", "chamber": "House", "n_trades": 4,
                                       "top_etf": "RSP", "low": 0.1, "high": 0.3}}.get(group, {"funds": ["AAA"]})
                 ranked = [row(1, f"Alpha {group} {win}", 0.42 * years, **extra), row(2, EVIL, -0.05, **extra),
                           row(3, "Gamma Person", 0.01, **extra)]
+                ranked[0]["beats"] = {"1y": True, "3y": True, "5y": False}
                 if group == "managers":
                     ranked[2]["detail"]["funds"][0]["source_url"] = "javascript:alert(1)"
                 if win == "1y":

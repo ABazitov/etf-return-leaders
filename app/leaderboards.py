@@ -141,7 +141,7 @@ def managers_board(funds: list[ManagerFund], book: PriceBook, w: Window, spy_tot
                            "counts": r is not None, "reason": reason, "source_url": f.source_url,
                            "evidence": f.evidence, "verified": f.verified.isoformat()})
         row = {"id": _slug(person), "name": person, "badge": "EXACT",
-               "funds": [d["ticker"] for d in detail if d["counts"]], "detail": {"funds": detail}}
+               "funds": [d["ticker"] for d in detail if d["counts"]], "priced_share": 1.0, "detail": {"funds": detail}}
         if not qualifying:
             row["reason"] = "no fund managed for the whole window"
             unranked.append(row)
@@ -360,7 +360,9 @@ def investors_board(histories: list[FilerHistory], famous: dict[str, tuple[str, 
         by_value = sorted(last_units.items(), key=lambda kv: -kv[1] * book.tri[kv[0]][t_last])
         row.update(_figures(res.total, w, spy_total))
         row.update({"etf_value_usd": values[latest_p], "n_etfs": len(last_units),
-                    "top_etf": by_value[0][0] if by_value else None, "latest_period": latest_p.isoformat()})
+                    "top_etf": by_value[0][0] if by_value else None, "latest_period": latest_p.isoformat(),
+                    "n_periods": len(present),
+                    "priced_share": 1 - max(unpriced_share.values())})     # R11 share, worst quarter in the window
         row["detail"]["series"] = _points(res.series)
         ranked.append(row)
     return ranked, unranked, issues
@@ -467,7 +469,8 @@ def congress_board(members: dict[str, MemberInfo], trades: dict[str, list[CTrade
         unpriced_mid = sum(t.amount.mid for t in counted if f"{t.report_id}#{t.row}" in unpriced_refs)
         m = members[key]
         row = {"id": key, "name": m.name, "chamber": m.chamber, "party_state": f"{m.party}-{m.state}",
-               "badge": "EST", "n_trades": len(ts), "detail": {"trades": detail_trades, "notes": []}}
+               "badge": "EST", "n_trades": len(ts), "priced_share": 1 - unpriced_mid / total_mid,
+               "detail": {"trades": detail_trades, "notes": []}}
         if n_earlier:
             row["detail"]["notes"].append({"ref": f"until {cut}", "message": f"{n_earlier} trade{'s' * (n_earlier > 1)} "
                                            "from an earlier time in office not counted: holdings end when a member "

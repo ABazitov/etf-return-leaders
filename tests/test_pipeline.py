@@ -132,6 +132,8 @@ def test_build_boards_end_to_end(ctx, tmp_path):
     assert len(boards) == 9
     m = boards[("managers", "1y")]
     assert m["ranked"][0]["vs_spx"] == pytest.approx(0.0, abs=1e-9)
+    assert {k: boards[("managers", k)]["ranked"][0]["beats"] for k in ("1y", "5y")} == \
+        {k: {"1y": False, "3y": False, "5y": False} for k in ("1y", "5y")}     # SPY itself never beats SPY
     c = boards[("congress", "1y")]
     assert c["ranked"] == [] and c["unranked"][0]["reason"].startswith("invested on ")
     i = boards[("investors", "1y")]

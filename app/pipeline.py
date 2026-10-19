@@ -1341,6 +1341,18 @@ def etf_shares(conn) -> dict[str, dict[date, float | None]]:
     return dict(out)
 
 
+def _mark_beats(boards: dict) -> None:
+    """Give each ranked row `beats`: for every window in which the person is ranked, whether they beat SPY there
+    (vs S&P above 0). The page uses it for consistency across windows."""
+    beats: dict[tuple[str, str], dict[str, bool]] = defaultdict(dict)
+    for (g, k), b in boards.items():
+        for r in b["ranked"]:
+            beats[(g, str(r["id"]))][k] = r["vs_spx"] > 0
+    for (g, _), b in boards.items():
+        for r in b["ranked"]:
+            r["beats"] = beats[(g, str(r["id"]))]
+
+
 _BOARDS_LOCK = threading.Lock()          # the job thread and the live thread both rebuild; never at the same time
 
 
@@ -1424,6 +1436,7 @@ def _build_boards(ctx: Ctx, managers_path: Path, famous_path: Path, live: bool =
         for g in ("managers", "congress"):                # ranked rows carry their rank, as they did in the board
             _stage_details(conn, g, k, boards[(g, k)]["ranked"])
             _stage_details(conn, g, k, boards[(g, k)]["unranked"])
+    _mark_beats(boards)
     new_periods = conn.execute("SELECT COUNT(*) FROM temp.board_periods_new").fetchone()[0]
     with db.transaction(conn):
         version = db.bump_version(conn)

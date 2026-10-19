@@ -25,6 +25,9 @@ a:hover { text-decoration: underline; }
 label.k { display: inline-flex; gap: 6px; align-items: center; }
 .srch { flex: 1 1 140px; min-width: 0; background: transparent; border: 1px solid var(--line); padding: 3px 8px; }
 .cap { margin: 10px 0 6px; font-size: 12px; }
+.intro { margin: 10px 0 0; max-width: 100ch; font-size: 12px; }
+#headline { color: var(--fg); }
+th[title] { cursor: help; text-decoration: underline dotted var(--line); }
 .tablewrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; }
 th { text-align: left; color: var(--mut); font-weight: 400; font-size: 11px; border-bottom: 1px solid var(--line); padding: 4px 8px; white-space: nowrap; }

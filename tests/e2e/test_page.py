@@ -68,6 +68,8 @@ def api(app_url, path):
 def test_numbers_on_screen_equal_api(page, app_url):
     for group, tab in (("managers", "MANAGERS"), ("investors", "13F"), ("congress", "CONGRESS")):
         page.get_by_role("tab", name=tab).click()
+        if group == "investors":
+            page.locator("#minbook").select_option("0")      # every fixture filer has 4.2% of its book in ETFs
         for win in ("1y", "3y", "5y"):
             page.keyboard.press(win[0])
             page.wait_for_function("n => { const c = document.querySelector('tbody tr.row td:nth-child(2)'); return c && c.textContent === n; }",
@@ -106,6 +108,7 @@ def test_not_enough_data_and_issues(page):
     page.get_by_text("NOT ENOUGH DATA (1)").click()
     assert page.get_by_text("invested on 15.6% of trading days").is_visible()
     page.get_by_role("button", name="1 issues").click()
+    page.get_by_text("1 item was left out or flagged by the data checks.", exact=False).wait_for()
     page.get_by_text("house · scanned").click()                    # one collapsed group per source and kind
     page.get_by_text("Hon. Example (OK04): scanned").wait_for()  # the issues list loads asynchronously
     assert page.get_by_text("Hon. Example (OK04): scanned").is_visible()
@@ -144,6 +147,7 @@ def test_issue_kinds_load_in_pages(tmp_path):
 
 def test_etf_share_of_the_book(page):
     page.get_by_role("tab", name="13F").click()
+    page.locator("#minbook").select_option("0")
     page.wait_for_function("() => document.querySelector('tbody tr.row td:nth-child(2)').textContent === 'Alpha investors 1y'")
     assert "% BOOK" in page.locator("thead").inner_text()
     cell = page.locator("tbody tr.row").first.get_by_text("4.2%", exact=True)
@@ -151,6 +155,33 @@ def test_etf_share_of_the_book(page):
     page.locator("tbody tr.row").first.click()
     page.get_by_text("4.2% of book").wait_for()                 # the period, read back from its store
     assert page.get_by_text("IAU", exact=True).count() >= 1
+
+
+def test_book_floor_hides_small_etf_books_by_default(page):
+    page.get_by_role("tab", name="13F").click()
+    page.get_by_text("3 ranked filers with ETFs under 10% of their book hidden", exact=False).wait_for()
+    assert page.locator("tbody tr.row").count() == 0
+    page.locator("#minbook").select_option("0")
+    assert page.locator("tbody tr.row").count() == 3
+    assert "4 quarters · 98.7% priced" in page.locator("tbody tr.row").first.inner_text()
+
+
+def test_headline_and_plain_words_detail(page):
+    page.wait_for_function("() => document.querySelector('#headline').textContent !== ''")
+    assert page.locator("#headline").inner_text() == (
+        "Fund managers, 1 year: 1 of 3 ranked people beat the S&P 500 (33%). The median was 9.0 points behind. "
+        "Of the 1 ranked over 1, 3 and 5 years, 0 beat it in all three.")
+    assert page.locator("th", has_text="vs SPX").get_attribute("title").startswith("Percentage points above")
+    page.locator("tbody tr.row").first.click()
+    page.get_by_text("Return +42.0% against +10.0% for the S&P 500 over the same dates: +32.0 points ahead of it. "
+                     "Based on 1 fund. Beat the S&P 500: 1Y yes · 3Y yes · 5Y no.").wait_for()
+
+
+def test_congress_says_when_the_senate_is_missing(page):
+    page.get_by_role("tab", name="CONGRESS").click()
+    page.get_by_text("Senate reports are not included (turned off in config.toml)", exact=False).wait_for()
+    page.get_by_role("tab", name="MANAGERS").click()
+    page.locator("#note").wait_for(state="hidden")
 
 
 def test_status_bar(page, app_url):
